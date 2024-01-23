@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contactstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+  <title>About Me</title>
+  <!-- Your other head elements go here -->
+</head>
+<body>
+  <div class="bgimg"></div>
+
+  <div class="hamburger-btn" onclick="toggleMenu()">
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="Aboutme">
+    <h1>
+      Reach Out
+      <a href="#" target="_blank" style="margin-left: 10px;"><i class="fa fa-instagram"></i></a> <!-- Instagram icon -->
+      <a href="https://wa.me/0810394867" target="_blank" style="margin-left: 10px;"><i class="fa fa-whatsapp"></i></a> <!-- WhatsApp icon -->
+    </h1>
+    <br>
+    <p>Hello, and thank you for reaching out. Your journey is unique, and I am here to provide support and guidance. Whether you're seeking assistance with personal challenges, exploring emotions, or simply looking for a listening ear, I am committed to helping you navigate through life's complexities. Your well-being is my priority, and I look forward to the opportunity to work together.</p>
+
+    <br>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>

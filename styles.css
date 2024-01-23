@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic'), local('CenturyGothic'),
+         url('Century Gothic.ttf') format('truetype');
+  }
+  
+  body, h1, h2 {
+    font-family: 'Century Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+      .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://cdn.dribbble.com/users/4043065/screenshots/8208557/media/3f44709115994ebcd8eacf76c20606e6.gif'); 
+        min-height: 100vh;
+        width: 40%;
+        float: left;
+        position: fixed; /* Make the background image fixed */
+  
+      }
+  
+      .content {
+        padding: 240px 16px;
+        width: 75%;
+        margin-left: 30%;
+        text-align: center;
+        overflow-y: scroll; /* Make the content scrollable */
+        height: 100vh; /* Set the height of the scrollable section to 100% of the viewport height */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        padding-left: 10%; /* Adjusted padding for better readability */
+  
+      }
+  
+  
+      .content h1 {
+        font-size: 55px;
+        margin-bottom: 16px;
+        color: #000000;
+      }
+  
+      .content h2 {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 54px; 
+      }
+  
+      .download-btn {
+        background-color: rgba(111, 111, 111, 0.09); /* Translucent green color */
+        color: rgb(0, 0, 0);
+        padding: 10px 28px; /* Increased padding for a longer button */
+        font-size: 1em;
+        font-family: 'Century Gothic';
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .download-btn:hover {
+        background-color: #e4ffdd; /* Translucent green color on hover */
+      }
+  
+      .download-btn i {
+        margin-right: 8px; /* Spacing between text and icon */
+      }
+  
+      .hamburger-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 40px;
+        transition: color 0.3s; /* Add a transition for smooth color change */
+      }
+      
+      
+      /* Navigation menu styles */
+      .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 40%; /* Set left position to the width of the image section */
+        background-color: rgb(18, 18, 18);
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .overlay.show {
+        width: 62%; /* Adjust width to cover the remaining section */
+      }
+      
+      .overlay a {
+        padding: 15px;
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      
+      .overlay a:hover,
+      .overlay a:focus {
+        color: #c4fdb5;
+      }
+/* Hamburger button animation styles */
+.menu-bar {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+
+.hamburger-btn.open .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+  background-color: #fff;
+}
+
+.hamburger-btn.open .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open .menu-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+  background-color: #fff;
+}
+
+.bottom-image {
+  position: relative; /* Use relative positioning */
+  top: 160px; /* Adjust the vertical position */
+  left: 2%; /* Adjust the horizontal position */
+  text-align: left;
+}
+
+.bottom-image img {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Your existing styles... */
+
+/* Mobile optimizations */
+@media only screen and (max-width: 600px) {
+  .hamburger-btn {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+    top: 10px; /* Adjusted top position for smaller screens */
+    right: 10px; /* Adjusted right position for smaller screens */
+  }
+
+  .overlay {
+    left: 0;
+  }
+
+  .overlay a {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .menu-bar {
+    width: 15px; /* Adjusted width for smaller screens */
+    height: 2px; /* Adjusted height for smaller screens */
+    margin: 3px 0; /* Adjusted margin for smaller screens */
+  }
+
+  .bgimg {
+    min-height: 30vh; /* Decreased min-height for smaller screens */
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .content {
+    padding: 40px 16px; /* Adjusted padding for smaller screens */
+    width: 100%; /* Adjusted width for smaller screens */
+    margin-left: 0; /* Adjusted margin for smaller screens */
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 32px; /* Adjusted font size for smaller screens */
+  }
+
+  .content h2 {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+    margin-bottom: 24px; /* Adjusted margin for smaller screens */
+  }
+
+  .download-btn {
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
+    font-size: 0.8em; /* Adjusted font size for smaller screens */
+  }
+
+  .download-btn i {
+    margin-right: 8px; /* Spacing between text and icon */
+  }
+
+  .bottom-image {
+    top: 120px; /* Adjusted vertical position for smaller screens */
+    left: 5%; /* Adjusted horizontal position for smaller screens */
+  }
+
+  .bottom-image img {
+    max-width: 100%; /* Adjusted maximum width for smaller screens */
+  }
+}

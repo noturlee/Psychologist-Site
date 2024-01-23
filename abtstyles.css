@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic'), local('CenturyGothic'),
+         url('Century Gothic.ttf') format('truetype');
+  }
+  
+  body, h1, h2 {
+    font-family: 'Century Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+  
+
+  .hamburger-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 40px;
+    transition: color 0.3s; /* Add a transition for smooth color change */
+  }
+  
+  
+  
+  /* Navigation menu styles */
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 40%; /* Set left position to the width of the image section */
+    background-color: rgb(18, 18, 18);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay.show {
+    width: 62%; /* Adjust width to cover the remaining section */
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #e3e6a3;
+  }
+/* Hamburger button animation styles */
+.menu-bar {
+width: 30px;
+height: 3px;
+background-color: #000;
+margin: 5px 0;
+transition: transform 0.5s, opacity 0.5s;
+}
+
+
+.hamburger-btn.open .menu-bar:nth-child(1) {
+transform: rotate(45deg) translate(5px, 6px);
+background-color: #fff;
+}
+
+.hamburger-btn.open .menu-bar:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger-btn.open .menu-bar:nth-child(3) {
+transform: rotate(-45deg) translate(5px, -6px);
+background-color: #fff;
+}
+
+.bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('Denise.JPG'); 
+    min-height: 100vh;
+    width: 40%;
+    float: left;
+    position: fixed; /* Make the background image fixed */
+
+  }
+
+  .Aboutme {
+    padding: 140px 16px;
+    width: 75%;
+    margin-left: 30%;
+    text-align: left;
+    overflow-y: scroll; /* Make the content scrollable */
+    height: 100vh; /* Set the height of the scrollable section to 100% of the viewport height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding-left: 13%; /* Adjusted padding for better readability */
+    padding-right: 8%;
+
+  }
+
+  .Aboutme h1 {
+    font-size: 45px;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+
+  img {
+    width: 20%;
+    padding-left: 20%;
+    padding-right: 10%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bottom-image {
+    position: relative; /* Use relative positioning */
+    top: 320px; /* Adjust the vertical position */
+    left: 5%; /* Adjust the horizontal position */
+    text-align: left;
+  }
+
+  .bottom-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hamburger-btn {
+      font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+  
+    .overlay {
+      left: 0;
+    }
+  
+    .overlay a {
+      font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+  
+    .menu-bar {
+      width: 15px; /* Adjusted width for smaller screens */
+      height: 2px; /* Adjusted height for smaller screens */
+      margin: 3px 0; /* Adjusted margin for smaller screens */
+    }
+  
+    .bgimg {
+      min-height: 30vh; /* Decreased min-height for smaller screens */
+    }
+  
+    .Aboutme {
+      padding: 40px 16px; /* Adjusted padding for smaller screens */
+    }
+  
+    .Aboutme h1 {
+      font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+  
+    img {
+      margin-bottom: 10px; /* Adjusted margin for smaller screens */
+    }
+  
+    .bottom-image {
+      margin-bottom: 10px; /* Adjusted margin for smaller screens */
+    }
+  }
